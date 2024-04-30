@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import subprocess
 import platform
 import os
@@ -1321,19 +1323,42 @@ def detect_antivirus(system_processes, antivirus_list):
     detected_antiviruses = {process: antivirus_list[process] for process in system_processes if process in antivirus_list}
     return detected_antiviruses
 
+def write_to_file(filename, content):
+    """将内容写入文件"""
+    with open(filename, 'w') as file:
+        file.write(content)
 def main():
     try:
         system_processes = get_system_processes()
         detected_antiviruses = detect_antivirus(system_processes, antivirus_processes)
-        
+
+        # 初始化一个空的字符串，用于累积所有的杀毒软件进程信息
+        file_content = ""
+
+        # 在控制台输出检测到的杀毒软件进程
         if detected_antiviruses:
             print("当前机器存在的杀毒软件进程：")
             for process, antivirus_name in detected_antiviruses.items():
+                # 控制台输出
                 print(f'"{process}": "{antivirus_name}"')
+                # 追加相同的信息到 file_content 字符串中，包括换行符
+                file_content += f'"{process}": "{antivirus_name}"\n'
+
+            # 将累积的字符串写入到 ok.txt 文件中
+            write_to_file('ok.txt', file_content)
+            print("杀毒软件进程已记录到ok.txt文件。")
         else:
             print("未检测到已知的杀毒软件进程。")
+            write_to_file('ok.txt', "未检测到已知的杀毒软件进程。")
+
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+# 确保 write_to_file 函数使用 'a' 模式来追加内容
+def write_to_file(filename, content):
+    """将内容追加到文件"""
+    with open(filename, 'a') as file:  # 使用 'a' 模式来追加内容
+        file.write(content)
 
 if __name__ == "__main__":
     main()
