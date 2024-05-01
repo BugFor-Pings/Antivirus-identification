@@ -16,7 +16,7 @@ tasklist命令版exe程序测试结果
 2.wmic process list brief命令版py脚本测试结果
 ![wmic process list brief](https://upload.cc/i1/2024/05/01/KXt4ld.png)
 wmic process list brief命令版exe程序测试结果
-![wmic process list brief]([https://upload.cc/i1/2024/05/01/Oknr4m.png)
+![wmic process list brief](https://upload.cc/i1/2024/05/01/Oknr4m.png)
 -----------------------------------------------------------------
 
 打包成exe后的程序仅供6.99mb大小。
