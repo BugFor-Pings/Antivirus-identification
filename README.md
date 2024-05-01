@@ -11,20 +11,20 @@ Anti-virus software process identification, the script built-in anti-virus softw
 
 Because some machines do not have a Python environment, it is compiled into an exe program, and after directly executing the exe program, a scan_ok.txt file is generated in the current path, and the file is the anti-virus software existing in the current machine
 
-
+1.tasklist命令版py脚本测试结果
 ![tasklist_py](https://upload.cc/i1/2024/05/01/oLFntZ.png)
-tasklist命令版py脚本测试结果
 
 ![tasklist_exe](https://upload.cc/i1/2024/05/01/6Bm7Qr.png)
 tasklist命令版exe程序测试结果
 
+-----------------------------------------------------------------
 为了防止意外，所以增加了一个wmic的，防止执行tasklist命令无回显或其他问题
 
-
+2.wmic process list brief命令版py脚本测试结果
 ![wmic process list brief](https://upload.cc/i1/2024/05/01/KXt4ld.png)
-wmic process list brief命令版py脚本测试结果
+
 
 ![wmic process list brief]([https://upload.cc/i1/2024/05/01/Oknr4m.png)
 wmic process list brief命令版exe程序测试结果
-
+-----------------------------------------------------------------
 打包成exe后的程序仅供6.99mb大小。
