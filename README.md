@@ -30,7 +30,7 @@ wmic process list brief命令版exe程序测试结果
 -----------------------------------------------------------------
 
 打包成exe后的程序仅供6.99mb大小。
-[img](https://upload.cc/i1/2024/05/01/JICiQW.png)
+![img](https://upload.cc/i1/2024/05/01/JICiQW.png)
 -----------------------------------------------------------------
 1.tasklist命令exe程序实际机器测试结果
 ![tasklist_py](https://upload.cc/i1/2024/05/01/JWfuRM.jpg)
