@@ -2,7 +2,7 @@
 
 
 杀毒软件进程识别，脚本内置了相关杀毒软件进程，直接执行即可得知存在什么杀毒软件，不需要自己执行命令。
-##Anti-virus software process identification, the script built-in anti-virus software process, directly execute to know what anti-virus software exists, do not need to execute their own commands.
+Anti-virus software process identification, the script built-in anti-virus software process, directly execute to know what anti-virus software exists, do not need to execute their own commands.
 
 
 
