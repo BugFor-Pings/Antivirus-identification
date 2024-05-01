@@ -1878,8 +1878,8 @@ def main():
                 # 追加相同的信息到 file_content 字符串中，包括换行符
                 file_content += f'"{process}": "{antivirus_name}"\n'
 
-            # 将累积的字符串写入到 ok.txt 文件中
-            write_to_file('ok.txt', file_content)
+            # 将累积的字符串写入到 scan_ok.txt 文件中
+            write_to_file('scan_ok.txt', file_content)
             print("杀毒软件进程已记录到ok.txt文件。")
         else:
             print("未检测到已知的杀毒软件进程。")
